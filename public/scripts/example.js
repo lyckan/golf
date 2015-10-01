@@ -1,24 +1,16 @@
-/**
- * This file provided by Facebook is for non-commercial testing and evaluation
- * purposes only. Facebook reserves all rights not expressly granted.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * FACEBOOK BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
- * ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
- * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-
 var Comment = React.createClass({
   render: function() {
     var rawMarkup = marked(this.props.children.toString(), {sanitize: true});
     return (
+      <div>
+      ------------ början på en comment ---------------
       <div className="comment">
         <h2 className="commentAuthor">
-          {this.props.author}
+          {this.props.author} <span>Ta bort</span>
         </h2>
         <span dangerouslySetInnerHTML={{__html: rawMarkup}} />
+      </div>
+      ------------ slutet på en comment ---------------
       </div>
     );
   }
@@ -64,10 +56,14 @@ var CommentBox = React.createClass({
   },
   render: function() {
     return (
+      <div>
+      ------------ början på en comment box -----------------
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.state.data} />
         <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+      </div>
+      ------------ slutet på en comment box -----------------
       </div>
     );
   }
@@ -86,8 +82,12 @@ var CommentList = React.createClass({
       );
     });
     return (
+      <div>
+      ------------ början på en comment list -----------------
       <div className="commentList">
         {commentNodes}
+      </div>
+      ------------ slutet på en comment comment list -----------------
       </div>
     );
   }
@@ -107,11 +107,15 @@ var CommentForm = React.createClass({
   },
   render: function() {
     return (
+      <div>
+        ------------ början på en comment form -----------------
       <form className="commentForm" onSubmit={this.handleSubmit}>
         <input type="text" placeholder="Your name" ref="author" />
         <input type="text" placeholder="Say something..." ref="text" />
         <input type="submit" value="Post" />
       </form>
+        ------------ slutet på en comment list -----------------
+      </div>
     );
   }
 });
