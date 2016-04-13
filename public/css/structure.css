@@ -1,0 +1,17 @@
+aside {
+    border: 1px solid black;
+    float: left;
+    min-height: 400px;
+    width: 24%;
+}
+
+#main {
+    border: 1px solid black;
+    float: left;
+    min-height: 400px;
+    width: 50%;
+}
+
+#header {
+    text-align: center;
+}
