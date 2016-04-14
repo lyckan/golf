@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp" ng-controller="myController">
+<html ng-app="myApp" >
   <head>
     <title>Testing</title>
     <!-- Not present in the tutorial. Just for basic styling. -->
@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/angular.treeview.css" />
     <script src="scripts/lib/angular/angular.js"></script>
     <script src="scripts/lib/angular/angular.treeview.js"></script>
+    
     <script src="scripts/app/app.module.js"></script>
+    <script src="scripts/app/components/leftSideBar/leftSideBarController.js"></script>
     
     
   </head>
@@ -15,7 +17,7 @@
     <div id="header">
         Header
     </div>
-    <aside id="" >
+    <aside id="" ng-controller="leftSideBarController">
           <div>
             <div>
                 <input type="button" value="TREE MODEL 1" data-ng-click="roleList = roleList1" /> <input type="button" value="TREE MODEL 2" data-ng-click="roleList = roleList2" />
@@ -28,6 +30,7 @@
             node-id : each node's id
             node-label : each node's label
             node-children: each node's children
+            tree-id: id of the treeView
             -->
             <div
                 data-angular-treeview="true"
