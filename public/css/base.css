@@ -48,3 +48,32 @@ a:hover {
 .row {
   display: table-row;
 }
+
+
+
+
+
+
+
+.scoreboard {
+    border: 1px black solid;
+    min-width: 300px;
+    width: 50%;
+}
+
+
+.scoreboard-row {
+    display: flex;
+    flex-flow: row;
+}
+
+.column {
+    border: 1px solid black;
+    flex: 0 1 50px;
+   
+    
+}
+
+.column:first-child {    
+    flex: 0 1 120px;
+}

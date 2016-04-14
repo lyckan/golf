@@ -1,11 +1,11 @@
 {
-  "name": "react-tutorial",
+  "name": "golf",
   "version": "0.0.0",
   "description": "Code from the React tutorial.",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.4.3",
-    "express": "^4.4.5"
+    "express": "^4.13.3"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/react-tutorial.git"
+    "url": "git+https://github.com/reactjs/react-tutorial.git"
   },
   "keywords": [
     "react",
@@ -27,7 +27,8 @@
     "url": "https://github.com/reactjs/react-tutorial/issues"
   },
   "homepage": "https://github.com/reactjs/react-tutorial",
-  "engines" : {
-    "node" : "0.12.x"
-  }
+  "engines": {
+    "node": "0.12.x"
+  },
+  "license": "ISC"
 }

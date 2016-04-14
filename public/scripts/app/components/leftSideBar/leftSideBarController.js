@@ -1,14 +1,9 @@
-(function(){
-  
-  //angular module
-  angular.module('myApp', ['angularTreeview']);
-  
+'use strict';
 
-
-  //test controller
-  /*myApp.controller('myController', function($scope){
-      $scope.test = "lyckan";
-  	//test tree model 1
+angular.module('myApp').controller('leftSideBarController', ['$scope', function($scope) {
+    $scope.test = "hi@email.c";
+    
+    
     $scope.roleList1 = [
         { "roleName" : "User", "roleId" : "role1", "children" : [
           { "roleName" : "subUser1", "roleId" : "role11", "children" : [] },
@@ -62,7 +57,5 @@
       
     //roleList1 to treeview
     $scope.roleList = $scope.roleList1;
-  
-  });*/
-  
-})();
+      
+}]);
