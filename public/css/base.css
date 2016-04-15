@@ -11,9 +11,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
-
 .headRow{
     display:table-row;
 }
@@ -47,4 +44,80 @@ a:hover {
 
 .row {
   display: table-row;
+}
+
+.scorecard-body, 
+.scorecard-header {
+    min-width: 200px;
+    height: 150px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; 
+    flex-wrap: no-wrap;    
+    justify-content: flex-start;
+}
+
+.scorecard-row { 
+    border-bottom: 1px solid black;
+    font-size: 2em;
+    min-width: 150px;
+    line-height: 100%;
+    text-align: center;
+    
+}
+
+.scorecard-header .scorecard-row {
+    background: tomato;
+    line-height: 150px;
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+}
+
+.mini-flex-container {
+    background: tomato;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 150px;
+    flex-wrap: wrap;   
+}
+
+.flex-row {
+    background: tomato;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.scorecard-header .flex-half-row {
+    background: tomato;
+    color: white;
+    text-align: center;
+    width: 49%;
+    font-size: 1.2em;
+    border-right: 1px white solid;
+}
+
+.flex-half-row {
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    font-size: 2.0em;
+}
+
+
+.scorecard-body .flex-half-row {
+    background-color: gray;
+}
+
+.header {
+    line-height: 150px;
+    font-weight: bold;
+    font-size: 3em;
 }
