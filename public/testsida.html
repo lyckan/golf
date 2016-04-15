@@ -1,21 +1,53 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp" >
   <head>
     <title>Testing</title>
     <!-- Not present in the tutorial. Just for basic styling. -->
     <link rel="stylesheet" href="css/structure.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+    <link rel="stylesheet" href="css/angular.treeview.css" />
     <script src="scripts/lib/angular/angular.js"></script>
+    <script src="scripts/lib/angular/angular.treeview.js"></script>
+    
+    <script src="scripts/app/app.module.js"></script>
+    <script src="scripts/app/components/leftSideBar/leftSideBarController.js"></script>
+    
+    
   </head>
   <body>
     <div id="header">
         Header
     </div>
-    <aside id="">Vänster</aside>
-    <div id="main">Main</div>
+    <aside id="" ng-controller="leftSideBarController">
+          <div>
+            <div>
+                <input type="button" value="TREE MODEL 1" data-ng-click="roleList = roleList1" /> <input type="button" value="TREE MODEL 2" data-ng-click="roleList = roleList2" />
+            </div>
+           {{test}}
+            <!--
+            [TREE attribute]
+            angular-treeview: the treeview directive
+            tree-model : the tree model on $scope.
+            node-id : each node's id
+            node-label : each node's label
+            node-children: each node's children
+            tree-id: id of the treeView
+            -->
+            <div
+                data-angular-treeview="true"
+                data-tree-model="roleList"
+                data-node-id="roleId"
+                data-node-label="roleName"
+                data-node-children="children" 
+                data-tree-id="bla">
+            </div>
+
+        </div>
+    </aside>
+    <div id="main">
+        <span>
+            <b>Selected Node</b> : {{bla.currentNode.roleName}}
+        </span>
+    </div>
     <aside>Höger</aside>
   </body>
 </html>
